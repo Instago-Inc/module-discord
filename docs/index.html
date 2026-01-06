@@ -59,13 +59,13 @@
   <body>
     <main>
       <h1>module/discord - V8 module</h1>
-      <p class="intro">Send messages to a Discord channel using webhooks with a small, focused API. It is designed to keep workflow steps short while delivering reliable notifications.</p>
+      <p class="intro">Send Discord messages with webhooks using a small, focused module meant for workflow notifications. It keeps automation steps short while still giving you control over message content.</p>
       <p class="muted">Learn more at <a href="https://instago.ai" target="_blank" rel="noopener">https://instago.ai</a>.</p>
       <div class="section">
         <h2>Technical reference</h2>
         <h1>module/discord - V8 module</h1>
-<p>Send messages to a Discord channel using webhooks with a small, focused API. It is designed to keep workflow steps short while delivering reliable notifications.</p>
-<p>Use it when you want a straightforward, webhook-based alert path for automations. Learn more at https://instago.ai.</p>
+<p>Send Discord messages with webhooks using a small, focused module meant for workflow notifications. It keeps automation steps short while still giving you control over message content.</p>
+<p>Use it when you want a simple webhook-based alert path for automations. Learn more at https://instago.ai.</p>
 <h2>Technical reference</h2>
 <p>Exports:</p>
 <ul>
@@ -74,13 +74,13 @@
 </ul>
 <p>Usage:</p>
 <ul>
-<li>Call <code>configure</code> once to set a default webhook URL.</li>
-<li>Call <code>send</code> to post a message. Passing <code>webhookUrl</code> in the call overrides the configured default.</li>
-<li>Returns <code>{ ok, data, error }</code> where <code>data</code> is the parsed response when available.</li>
+<li>Call <code>configure</code> to set a default webhook URL (optional if you pass <code>webhookUrl</code> per call).</li>
+<li>Call <code>send</code> to post a message; it returns <code>{ ok, data }</code> on success or <code>{ ok, error }</code> on failure.</li>
+<li><code>send</code> throws if called without options or without any webhook URL configured.</li>
 </ul>
 <p>Configuration:</p>
 <ul>
-<li><code>discord.webhook</code> (required) — Default Discord webhook URL.</li>
+<li><code>discord.webhook</code> (required) — Default Discord webhook URL (pass into <code>configure</code>).</li>
 </ul>
 <p>Examples:</p>
 <pre class="code"><code>
@@ -109,7 +109,13 @@ await discord.send({
       </div>
       <div class="section">
   <h2>Changelog</h2>
-  <h2>v1.0.1 - Discord webhook maintenance</h2>
+  <h2>v1.0.2 - Discord webhook maintenance update</h2>
+<p>No functional changes since the last release; this maintenance update keeps Discord webhook messaging metadata current for search visibility.</p>
+<h3>Changed</h3>
+<ul>
+<li>Release metadata updated; no functional changes.</li>
+</ul>
+<h2>v1.0.1 - Discord webhook maintenance</h2>
 <p>Maintenance release for the Discord webhook helper with a stable API for webhook messaging and workflow integrations.</p>
 <h3>Changed</h3>
 <ul>
