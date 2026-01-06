@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>discord Documentation</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 48px 24px;
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        color: #e2e8f0;
+      }
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: 28px;
+      }
+      .intro {
+        font-size: 16px;
+        color: #e2e8f0;
+      }
+      p {
+        margin: 0 0 16px;
+        color: #cbd5f5;
+      }
+      ul {
+        margin: 12px 0 0;
+        padding-left: 18px;
+      }
+      a {
+        color: #93c5fd;
+      }
+      .section {
+        margin-top: 28px;
+      }
+      .muted {
+        color: #94a3b8;
+        font-size: 14px;
+        margin: 6px 0 0;
+      }
+      .code {
+        background: #0b1220;
+        border: 1px solid #1e293b;
+        border-radius: 10px;
+        padding: 16px;
+        white-space: pre-wrap;
+        word-break: break-word;
+        font-size: 13px;
+        line-height: 1.5;
+        color: #e2e8f0;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>module/discord - V8 module</h1>
+      <p class="intro">Send messages to a Discord channel using webhooks with a small, focused API. It is designed to keep workflow steps short while delivering reliable notifications.</p>
+      <p class="muted">Learn more at <a href="https://instago.ai" target="_blank" rel="noopener">https://instago.ai</a>.</p>
+      <div class="section">
+        <h2>Technical reference</h2>
+        <h1>module/discord - V8 module</h1>
+<p>Send messages to a Discord channel using webhooks with a small, focused API. It is designed to keep workflow steps short while delivering reliable notifications.</p>
+<p>Use it when you want a straightforward, webhook-based alert path for automations. Learn more at https://instago.ai.</p>
+<h2>Technical reference</h2>
+<p>Exports:</p>
+<ul>
+<li><code>configure({ webhookUrl })</code></li>
+<li><code>send({ content, username?, avatar_url?, embeds?, tts?, webhookUrl? })</code></li>
+</ul>
+<p>Usage:</p>
+<ul>
+<li>Call <code>configure</code> once to set a default webhook URL.</li>
+<li>Call <code>send</code> to post a message. Passing <code>webhookUrl</code> in the call overrides the configured default.</li>
+<li>Returns <code>{ ok, data, error }</code> where <code>data</code> is the parsed response when available.</li>
+</ul>
+<p>Configuration:</p>
+<ul>
+<li><code>discord.webhook</code> (required) — Default Discord webhook URL.</li>
+</ul>
+<p>Examples:</p>
+<pre class="code"><code>
+const discord = require(&#x27;discord@latest&#x27;);
+
+discord.configure({ webhookUrl: &#x27;https://discord.com/api/webhooks/XXX/YYY&#x27; });
+
+await discord.send({ content: &#x27;Hello from workflow!&#x27; });
+
+await discord.send({
+  content: &#x27;Custom sender&#x27;,
+  username: &#x27;Workflow Bot&#x27;,
+  avatar_url: &#x27;https://example.com/bot.png&#x27;
+});
+
+await discord.send({
+  embeds: [
+    {
+      title: &#x27;Build Status&#x27;,
+      description: &#x27;All green&#x27;,
+      color: 0x2ecc71
+    }
+  ]
+});
+</code></pre>
+      </div>
+      <div class="section">
+  <h2>Changelog</h2>
+  <h2>v1.0.1 - Discord webhook maintenance</h2>
+<p>Maintenance release for the Discord webhook helper with a stable API for webhook messaging and workflow integrations.</p>
+<h3>Changed</h3>
+<ul>
+<li>Release metadata updated for packaging.</li>
+</ul>
+</div>
+    </main>
+  </body>
+</html>
