@@ -59,13 +59,13 @@
   <body>
     <main>
       <h1>module/discord - V8 module</h1>
-      <p class="intro">Send Discord messages with webhooks using a small, focused module meant for workflow notifications. It keeps automation steps short while still giving you control over message content.</p>
+      <p class="intro">Send Discord webhook messages from your workflows with a compact helper. It is designed for simple notifications and keeps step code short.</p>
       <p class="muted">Learn more at <a href="https://instago.ai" target="_blank" rel="noopener">https://instago.ai</a>.</p>
       <div class="section">
         <h2>Technical reference</h2>
         <h1>module/discord - V8 module</h1>
-<p>Send Discord messages with webhooks using a small, focused module meant for workflow notifications. It keeps automation steps short while still giving you control over message content.</p>
-<p>Use it when you want a simple webhook-based alert path for automations. Learn more at https://instago.ai.</p>
+<p>Send Discord webhook messages from your workflows with a compact helper. It is designed for simple notifications and keeps step code short.</p>
+<p>Use it for lightweight alerts and status updates. Learn more at https://instago.ai.</p>
 <h2>Technical reference</h2>
 <p>Exports:</p>
 <ul>
@@ -74,8 +74,8 @@
 </ul>
 <p>Usage:</p>
 <ul>
-<li>Call <code>configure</code> to set a default webhook URL (optional if you pass <code>webhookUrl</code> per call).</li>
-<li>Call <code>send</code> to post a message; it returns <code>{ ok, data }</code> on success or <code>{ ok, error }</code> on failure.</li>
+<li>Call <code>configure</code> to store a default webhook URL (optional if you pass <code>webhookUrl</code> per call).</li>
+<li>Call <code>send</code> to post a message; it resolves to <code>{ ok, data }</code> on success or <code>{ ok, error }</code> on failure.</li>
 <li><code>send</code> throws if called without options or without any webhook URL configured.</li>
 </ul>
 <p>Configuration:</p>
@@ -109,7 +109,13 @@ await discord.send({
       </div>
       <div class="section">
   <h2>Changelog</h2>
-  <h2>v1.0.2 - Discord webhook maintenance update</h2>
+  <h2>v1.0.3 - Discord webhook docs refresh</h2>
+<p>Clarifies the Discord webhook messaging guidance so workflow builders understand configure/send behaviors and required webhook setup.</p>
+<h3>Changed</h3>
+<ul>
+<li>Updated README and docs copy to highlight optional configuration, explicit send return shapes, and failure handling.</li>
+</ul>
+<h2>v1.0.2 - Discord webhook maintenance update</h2>
 <p>No functional changes since the last release; this maintenance update keeps Discord webhook messaging metadata current for search visibility.</p>
 <h3>Changed</h3>
 <ul>

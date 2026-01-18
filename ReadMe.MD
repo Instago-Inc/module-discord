@@ -1,8 +1,8 @@
 # module/discord - V8 module
 
-Send Discord messages with webhooks using a small, focused module meant for workflow notifications. It keeps automation steps short while still giving you control over message content.
+Send Discord webhook messages from your workflows with a compact helper. It is designed for simple notifications and keeps step code short.
 
-Use it when you want a simple webhook-based alert path for automations. Learn more at https://instago.ai.
+Use it for lightweight alerts and status updates. Learn more at https://instago.ai.
 
 ## Technical reference
 
@@ -11,8 +11,8 @@ Exports:
 - `send({ content, username?, avatar_url?, embeds?, tts?, webhookUrl? })`
 
 Usage:
-- Call `configure` to set a default webhook URL (optional if you pass `webhookUrl` per call).
-- Call `send` to post a message; it returns `{ ok, data }` on success or `{ ok, error }` on failure.
+- Call `configure` to store a default webhook URL (optional if you pass `webhookUrl` per call).
+- Call `send` to post a message; it resolves to `{ ok, data }` on success or `{ ok, error }` on failure.
 - `send` throws if called without options or without any webhook URL configured.
 
 Configuration:

@@ -1,6 +1,6 @@
 {
   "name": "@instago/discord",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Send messages to a Discord channel via webhook.",
   "main": "index.js",
   "type": "commonjs",

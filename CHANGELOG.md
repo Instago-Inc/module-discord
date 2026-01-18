@@ -1,3 +1,10 @@
+## v1.0.4 - Discord webhook clarity refresh
+Clarifies the README/docs messaging and dependency guidance so workflow builders clearly understand configure/send behaviors for Discord webhooks.
+
+### Changed
+- Refreshed README and docs copy to highlight optional configure defaults, send return shapes, and failure handling for webhook alerts.
+- Updated `json` and `log` requires to `@latest` so the module stays compatible with the latest logging/JSON helpers referenced in the docs.
+
 ## v1.0.3 - Discord webhook docs refresh
 Clarifies the Discord webhook messaging guidance so workflow builders understand configure/send behaviors and required webhook setup.
 

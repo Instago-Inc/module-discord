@@ -11,8 +11,8 @@
 //   -> Promise resolving to Discord response (JSON) or status text.
 
 (function () {
-  const json = require('json@1.0.0');
-  const log = require('log@1.0.0').create('discord');
+  const json = require('json@latest');
+  const log = require('log@latest').create('discord');
   const state = { webhookUrl: null };
 
   function configure(opts) {
